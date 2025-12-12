@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | FlexiCash</title>
+  
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- ✅ LOGIN SCRIPT -->
+  <script type="module" src="js/login.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="topbar">
+      <a href="index.html" class="text-logo">
+  <span class="logo-icon">$</span>Flexi<span class="logo-highlight">Cash</span>
+</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+
+    <nav id="mobileMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="rates-and-terms.html">Rates & Terms</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="apply.html" class="apply-btn">Apply Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- LOGIN FORM -->
+  <section class="auth-page">
+    <h1>Login to Your Account</h1>
+
+    <form id="loginForm">
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+
+    <p class="auth-switch">
+      Don’t have an account? <a href="register.html">Register here</a>
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+ <!-- REPLACE YOUR FOOTER WITH THIS -->
+  <footer>
+    <div class="container">
+      <div style="margin-bottom: 20px;">
+        <p style="font-size: 1.1rem; font-weight: bold; color: #ffb700; margin-bottom: 10px;">FlexiCash Headquarters</p>
+        <p>📍 416 Meadowbrook Ln, Bartlesville, OK 74003</p>
+        <p>📞 (918) 886-0822</p>
+        <p>✉️ support@flexicash.store</p>
+      </div>
+      
+      <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+
+      <p>© 2025 FlexiCash Inc. All Rights Reserved.</p>
+      <p>
+        <a href="privacy-policy.html">Privacy Policy</a> | 
+        <a href="terms-of-use.html">Terms of Use</a> |
+        <a href="rates-and-terms.html">Rates</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

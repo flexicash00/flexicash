@@ -1,0 +1,831 @@
+/* ---------- GLOBAL RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+body {
+  color: #333;
+  background: #f9fafc;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background-color: #0055a5;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+
+/* --- NEW LOGO CSS (Added) --- */
+.text-logo {
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 800;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  letter-spacing: -1px;
+}
+.logo-icon {
+  background-color: #ffb700;
+  color: #003366;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-right: 8px;
+  font-weight: 900;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.logo-highlight {
+  color: #ffb700;
+}
+
+/* Hide menu toggle on desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+/* Desktop navigation */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 10px 0;
+}
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav ul li a:hover {
+  color: #ffd700;
+}
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+.auth-buttons a {
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Header Buttons */
+.login-btn {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+.apply-btn {
+  background-color: #ffb700;
+  color: #000; /* Black text */
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  position: relative;
+  text-align: center;
+  color: #003366;
+  margin-bottom: 50px;
+}
+.hero-bg {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  filter: brightness(80%);
+}
+.hero-content {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255,255,255,0.85);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0; 
+}
+.hero-content h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.hero-content p {
+  margin-bottom: 15px;
+}
+
+/* ---------- FORM ---------- */
+.eligibility-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.eligibility-form select,
+.eligibility-form button {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.eligibility-form button {
+  background: #003366;
+  color: white;
+  cursor: pointer;
+}
+.form-message {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* ---------- FEATURES ---------- */
+.features {
+  text-align: center;
+  padding: 60px 0;
+  padding-top: 40px;
+}
+.features h2 {
+  color: #003366;
+  margin-bottom: 30px;
+}
+.feature-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.feature-box {
+  background: #e6efff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 280px;
+}
+.feature-box img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+/* ---------- TRUST & TESTIMONIAL ---------- */
+.trust {
+  background: #f1f5ff;
+  text-align: center;
+  padding: 50px 20px;
+}
+.trust h2 {
+  color: #003366;
+  margin-bottom: 20px;
+}
+.trust-logos img {
+  margin: 0 10px;
+  height: 50px;
+  vertical-align: middle;
+}
+blockquote {
+  max-width: 600px;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  border-left: 5px solid #ffcc00;
+  border-radius: 8px;
+}
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.testimonials blockquote {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+/* Review button */
+.review-btn {
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+.review-btn:hover {
+  background: #ffcc00;
+  color: #003366;
+}
+/* Review form */
+.review-form {
+  margin-top: 25px;
+  background: white;
+  padding: 20px;
+  max-width: 500px;
+  margin-inline: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.review-form input,
+.review-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.review-form button {
+  background: #003366;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.review-form button:hover {
+  background: #ffcc00;
+  color: #003366;
+}
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+/* ---------- RESPONSIVE ---------- */
+/* ===== MOBILE MENU STYLES ===== */
+@media (max-width: 768px) {
+  /* Show hamburger, hide menu by default */
+  .menu-toggle {
+    display: block;
+  }
+  .hero-content {
+    top: 55%;
+    padding: 20px;
+  }
+  nav {
+    display: none; /* hide menu initially */
+    flex-direction: column;
+    background-color: #0055a5;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 1000;
+  }
+  nav.active {
+    display: flex; /* show when toggled */
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .auth-buttons {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .auth-buttons a {
+    width: 120px;
+    text-align: center;
+  }
+}
+
+/* ===================== APPLY FORM PAGE ===================== */
+.apply-form {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 40px 30px;
+  background: #ffffffee;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+}
+.apply-form form {
+  display: flex;
+  flex-direction: column;
+}
+.apply-form label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+.apply-form input,
+.apply-form select,
+.apply-form textarea {
+  margin-bottom: 20px;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+.apply-form input:focus,
+.apply-form select:focus,
+.apply-form textarea:focus {
+  border-color: #0078ff;
+  box-shadow: 0 0 5px rgba(0, 120, 255, 0.3);
+  outline: none;
+}
+.apply-form button {
+  padding: 14px;
+  background: #0078ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.apply-form button:hover {
+  background: #005fd4;
+}
+/* Success or error message styling */
+.form-message,
+#applyMessage {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+.apply-hero {
+  text-align: center;
+  padding: 80px 20px 40px; /* top right/left bottom */
+  background: #f5f9ff; /* light background to separate from form */
+  color: #003366; /* match your brand blue */
+}
+.apply-hero h1 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.apply-hero p {
+  font-size: 1.1em;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+  .apply-form {
+    margin: 80px 20px;
+    padding: 25px 20px;
+  }
+  .apply-form input,
+  .apply-form select,
+  .apply-form button {
+    font-size: 15px;
+  }
+}
+
+/* HOW IT WORKS PAGE */
+.how-it-works {
+  padding: 80px 20px;
+  background-color: #f9fafc;
+  text-align: center;
+}
+.how-it-works h1 {
+  font-size: 2rem;
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+.how-it-works .intro {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+.step-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 280px;
+}
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+.step-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+.step-card h2 {
+  color: #1a237e;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.step-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+.cta-center {
+  margin-top: 50px;
+}
+.cta-center .apply-btn {
+  background-color: #fbc02d;
+  color: #000;
+  padding: 12px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.cta-center .apply-btn:hover {
+  background-color: #ffeb3b;
+}
+
+/* RATES & TERMS PAGE */
+.hero.light {
+  background: #f5f6fa;
+  padding: 80px 20px 50px;
+  text-align: center;
+}
+.hero.light h1 {
+  color: #1a237e;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+.hero.light p {
+  color: #555;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.rates {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+.rates h2 {
+  color: #1a237e;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+.rates p {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  font-size: 1rem;
+}
+.rates-table {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto 40px;
+  border-collapse: collapse;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+/* Existing table styling refined */
+.rates-table {
+  width: 90%;
+  max-width: 800px;
+  margin: 60px auto; 
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+/* Table cells */
+.rates-table th,
+.rates-table td {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+/* Header cells */
+.rates-table th {
+  background: #1a237e;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+/* Alternate row colors */
+.rates-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+/* Hover effect */
+.rates-table tr:hover {
+  background: #eef2ff;
+  transition: 0.3s ease;
+}
+/* Make it responsive */
+@media (max-width: 600px) {
+  .rates-table {
+    width: 95%;
+    font-size: 0.9rem;
+  }
+  .rates-table th,
+  .rates-table td {
+    padding: 10px;
+  }
+}
+.disclaimer {
+  background: #f5f6fa;
+  padding: 30px 20px;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+.disclaimer strong {
+  color: #1a237e;
+}
+/* --- Responsive Fix for Mobile Tables --- */
+@media (max-width: 768px) {
+  .rates-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto; 
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .rates-table table,
+  .rates-table thead,
+  .rates-table tbody,
+  .rates-table th,
+  .rates-table td,
+  .rates-table tr {
+    display: block;
+  }
+  .rates-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+  }
+  .rates-table th {
+    background: #1a237e;
+    color: #fff;
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+  .rates-table td {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+  .rates-table td:last-child {
+    border-bottom: none;
+  }
+  .rates-table th,
+  .rates-table td::before {
+    display: block;
+  }
+  /* Optional: add scroll bar hint */
+  .rates-table::-webkit-scrollbar {
+    height: 6px;
+  }
+  .rates-table::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+  }
+}
+
+/* === FAQ PAGE === */
+.faq-section {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 20px;
+}
+.faq-section h1 {
+  text-align: center;
+  color: #1a237e;
+  margin-bottom: 40px;
+}
+.faq {
+  background: #f9f9f9;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+.faq:hover {
+  background: #eef2ff;
+}
+.faq h3 {
+  color: #1a237e;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+.faq p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+@media (max-width: 600px) {
+  .faq-section {
+    width: 90%;
+    margin: 60px auto;
+    padding: 10px;
+  }
+  .faq h3 {
+    font-size: 1rem;
+  }
+  .faq p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ---------- LEGAL PAGES (Privacy & Terms) ---------- */
+.legal-section {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 20px;
+  line-height: 1.7;
+  color: #333;
+}
+.legal-section h1 {
+  color: #1a237e;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.legal-section h2 {
+  color: #003366;
+  margin-top: 25px;
+}
+.legal-section a {
+  color: #1a237e;
+  text-decoration: underline;
+}
+.legal-section a:hover {
+  color: #0055ff;
+}
+
+/* === AUTH PAGES (Register / Login) === */
+.auth-page {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.auth-page h1 {
+  color: #1a237e;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+.auth-page input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.auth-page button {
+  width: 100%;
+  padding: 12px;
+  background: #003366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.auth-page button:hover {
+  background: #00224d;
+}
+.auth-switch {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+.auth-switch a {
+  color: #003366;
+  font-weight: bold;
+  text-decoration: none;
+}
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+/* --- DASHBOARD STYLES --- */
+.dashboard-box {
+  max-width: 700px;
+  margin: 80px auto;
+  text-align: center;
+}
+.dashboard-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+.info-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 260px;
+  text-align: left;
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+.info-card h3 {
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+/* =========================================
+   FIXED BOTTOM SECTION (LOGOUT & BUTTONS)
+   ========================================= */
+
+/* Unified Styles for Apply and Logout Buttons 
+   (Yellow Background, Black Text, Bold) */
+.apply-btn, 
+#logoutBtn {
+  background-color: #ffb700;
+  color: #000;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: inline-block; /* Ensures consistent sizing */
+  text-align: center;
+}
+
+/* Hover Effect */
+.apply-btn:hover, 
+#logoutBtn:hover {
+  background-color: #e6a600; /* Darker yellow on hover */
+  color: #000;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .auth-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .login-btn,
+  .apply-btn,
+  #logoutBtn {
+    width: 200px; /* Wider buttons on mobile menu */
+    text-align: center;
+  }
+}

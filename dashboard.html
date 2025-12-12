@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- ✅ DASHBOARD SEO -->
+  <title>My Dashboard | FlexiCash</title>
+  <meta name="robots" content="noindex, nofollow" /> <!-- Keep dashboard private from Google -->
+  
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ✅ THE MISSING BRAIN (This makes the data and logout work) -->
+  <script type="module" src="js/dashboard.js" defer></script>
+  
+  <!-- Main JS for menu toggles -->
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <a href="index.html" class="text-logo">
+  <span class="logo-icon">$</span>Flexi<span class="logo-highlight">Cash</span>
+</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+
+    <nav id="mobileMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="rates-and-terms.html">Rates & Terms</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <button id="logoutBtn" class="login-btn">Logout</button>
+        <a href="apply.html" class="apply-btn">Apply Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="auth-section">
+    <div class="auth-container dashboard-box">
+      <h2>Welcome back, <span id="userName">—</span> 👋</h2>
+      <p class="sub-text">Here’s your account overview.</p>
+
+      <div class="dashboard-info" id="dashboardInfo"></div>
+    </div>
+  </section>
+
+ <!-- REPLACE YOUR FOOTER WITH THIS -->
+  <footer>
+    <div class="container">
+      <div style="margin-bottom: 20px;">
+        <p style="font-size: 1.1rem; font-weight: bold; color: #ffb700; margin-bottom: 10px;">FlexiCash Headquarters</p>
+        <p>📍 416 Meadowbrook Ln, Bartlesville, OK 74003</p>
+        <p>📞 (918) 886-0822</p>
+        <p>✉️ support@flexicash.store</p>
+      </div>
+      
+      <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+
+      <p>© 2025 FlexiCash Inc. All Rights Reserved.</p>
+      <p>
+        <a href="privacy-policy.html">Privacy Policy</a> | 
+        <a href="terms-of-use.html">Terms of Use</a> |
+        <a href="rates-and-terms.html">Rates</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

