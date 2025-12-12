@@ -1,39 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <!-- Homepage -->
   <url>
-    <loc>https://flexicash.store/index.html</loc>
+    <loc>https://flexicash.store/</loc>
     <lastmod>2025-01-01</lastmod>
     <priority>1.00</priority>
   </url>
-  
-  <!-- Apply Page (Important) -->
+
+  <!-- Apply Page (High priority) -->
   <url>
     <loc>https://flexicash.store/apply.html</loc>
+    <lastmod>2025-01-01</lastmod>
     <priority>0.90</priority>
   </url>
-  
-  <!-- Information Pages -->
+
+  <!-- Key Information Pages -->
   <url>
     <loc>https://flexicash.store/how-it-works.html</loc>
+    <lastmod>2025-01-01</lastmod>
     <priority>0.80</priority>
   </url>
+
   <url>
     <loc>https://flexicash.store/rates-and-terms.html</loc>
+    <lastmod>2025-01-01</lastmod>
     <priority>0.80</priority>
   </url>
+
   <url>
     <loc>https://flexicash.store/faq.html</loc>
+    <lastmod>2025-01-01</lastmod>
     <priority>0.70</priority>
   </url>
-  
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://flexicash.store/privacy-policy.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://flexicash.store/terms-of-use.html</loc>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.60</priority>
+  </url>
+
   <!-- Login/Register -->
   <url>
     <loc>https://flexicash.store/login.html</loc>
-    <priority>0.60</priority>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.50</priority>
   </url>
+
   <url>
     <loc>https://flexicash.store/register.html</loc>
-    <priority>0.60</priority>
+    <lastmod>2025-01-01</lastmod>
+    <priority>0.50</priority>
   </url>
+
 </urlset>
