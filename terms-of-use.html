@@ -75,6 +75,7 @@
         <li><a href="how-it-works.html">How It Works</a></li>
         <li><a href="rates-and-terms.html">Rates & Terms</a></li>
         <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html">Blog</a></li>
       </ul>
       <div class="auth-buttons">
         <a href="login.html" class="login-btn">Login</a>
@@ -134,7 +135,35 @@
     </div>
   </footer>
 
-  
+ <!-- ✅ Main JS (hamburger + mobile nav) -->
+<script src="js/main.js"></script>
+
+<!-- ✅ Mobile menu toggle -->
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
+    });
+  }
+</script>
+
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69430be2ea27d7197b096542/1jcmucrag';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->  
 
 </body>
 </html>
+
