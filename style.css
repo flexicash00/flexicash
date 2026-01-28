@@ -829,3 +829,270 @@ footer a {
     text-align: center;
   }
 }
+
+
+/* ===================== BLOG PAGE (CLEAN & PROFESSIONAL) ===================== */
+
+.blog-hero {
+  text-align: center;
+  padding: 60px 20px 30px;
+  background-color: #f9fafc;
+}
+
+.blog-hero h1 {
+  color: #003366;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.blog-hero p {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* The Grid Container */
+.blog-grid {
+  display: grid;
+  /* Desktop: 3 cards per row */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+
+/* The Card */
+.blog-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  border-color: #0055a5;
+}
+
+/* Professional Icon Container */
+.thumb {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.thumb svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Icon Color Variations */
+.thumb.loan { background: #e3f2fd; color: #0d47a1; }       /* Blue */
+.thumb.badcredit { background: #ffebee; color: #b71c1c; }  /* Red */
+.thumb.sameday { background: #e8f5e9; color: #1b5e20; }    /* Green */
+.thumb.emergency { background: #fff3e0; color: #e65100; }  /* Orange */
+.thumb.installment { background: #f3e5f5; color: #4a148c; }/* Purple */
+.thumb.online { background: #e0f7fa; color: #006064; }     /* Teal */
+
+/* Typography inside Card */
+.blog-card h3 {
+  color: #003366;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.blog-card p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  flex-grow: 1; /* Pushes 'Read More' to bottom */
+}
+
+.read-more {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0055a5;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ===================== MOBILE VIEW (The "Two-by-Side" Fix) ===================== */
+@media (max-width: 768px) {
+  
+  .blog-grid {
+    /* Forces 2 columns on phone */
+    grid-template-columns: 1fr 1fr; 
+    gap: 12px; /* Smaller gap for phones */
+    padding: 0 15px;
+  }
+
+  .blog-card {
+    padding: 15px; /* Smaller padding inside card */
+  }
+
+  .thumb {
+    width: 40px;
+    height: 40px; /* Smaller icons */
+    margin-bottom: 10px;
+  }
+
+  .thumb svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .blog-card h3 {
+    font-size: 0.9rem; /* Smaller text to fit */
+    margin-bottom: 5px;
+  }
+
+  /* This is the part that limits text to 3 lines */
+  .blog-card p {
+    font-size: 0.8rem;
+    
+    /* These 4 lines work together to cut off text */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical; /* Ignore Red Warning Here */
+    overflow: hidden;
+  }
+
+} /* <--- This closes the @media query */
+
+
+  /* ===================== ARTICLE / BLOG POST PAGE ===================== */
+
+/* Hero Section for Article */
+.personal-hero {
+  background-color: #f9fafc;
+  text-align: center;
+  padding: 60px 20px 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.personal-hero h1 {
+  color: #003366;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.personal-hero p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Article Content Container */
+main.container {
+  max-width: 800px; /* Reading width (like a book) */
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* The SVG Shield Icon (Fixed Size) */
+.ok-svg {
+  display: block;
+  margin: 0 auto 40px; /* Center it + space below */
+  width: 120px;        /* Much smaller! */
+  height: 120px;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+/* Content Sections */
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  color: #003366;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.section p, .section li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section ul, .section ol {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.section li {
+  margin-bottom: 8px;
+}
+
+/* CTA Button inside Article */
+.cta-btn {
+  display: inline-block;
+  background-color: #ffb700;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+.cta-btn:hover {
+  background-color: #e6a600;
+}
+
+/* FAQ Box Styling */
+.section.faq {
+  background-color: #f5f9ff;
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 5px solid #0055a5;
+}
+
+.section.faq h2 {
+  border-bottom: none; /* Remove line for FAQ header */
+  margin-bottom: 20px;
+}
+
+.section.faq h3 {
+  font-size: 1.1rem;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+/* Back Link */
+.back-btn {
+  display: block;
+  text-align: center;
+  margin: 40px auto 60px;
+  color: #666;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back-btn:hover {
+  color: #003366;
+  text-decoration: underline;
+}
