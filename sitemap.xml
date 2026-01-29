@@ -4,59 +4,103 @@
   <!-- Homepage -->
   <url>
     <loc>https://flexicash.store/</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>1.00</priority>
   </url>
 
-  <!-- Apply Page (High priority) -->
+  <!-- Apply Page (High Intent) -->
   <url>
     <loc>https://flexicash.store/apply.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.90</priority>
   </url>
 
-  <!-- Key Information Pages -->
+  <!-- Blog Index -->
+  <url>
+    <loc>https://flexicash.store/blog.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Loan Cluster Pages (SEO Priority) -->
+  <url>
+    <loc>https://flexicash.store/personal-loans-oklahoma.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://flexicash.store/emergency-loans-oklahoma.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://flexicash.store/same-day-loans-oklahoma.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://flexicash.store/installment-loans-oklahoma.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://flexicash.store/online-loans-oklahoma.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://flexicash.store/bad-credit-loans-oklahoma.html</loc>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Info Pages -->
   <url>
     <loc>https://flexicash.store/how-it-works.html</loc>
-    <lastmod>2025-01-01</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://flexicash.store/rates-and-terms.html</loc>
-    <lastmod>2025-01-01</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2026-01-25</lastmod>
+    <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://flexicash.store/faq.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.70</priority>
   </url>
 
   <!-- Legal Pages -->
   <url>
     <loc>https://flexicash.store/privacy-policy.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.60</priority>
   </url>
 
   <url>
     <loc>https://flexicash.store/terms-of-use.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.60</priority>
   </url>
 
-  <!-- Login/Register -->
+  <!-- Auth Pages -->
   <url>
     <loc>https://flexicash.store/login.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.50</priority>
   </url>
 
   <url>
     <loc>https://flexicash.store/register.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-01-25</lastmod>
     <priority>0.50</priority>
   </url>
 
