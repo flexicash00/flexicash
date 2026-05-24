@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 🔥 UK SEO TITLE -->
+  <title>Apply Now | Fast Online Personal Loans UK – FlexiCash</title>
+
+  <!-- 🔥 UK DESCRIPTION -->
+  <meta name="description" content="Apply for a fast UK personal loan online. Secure application for UK residents. Get a decision quickly and funds sent to your UK bank account.">
+
+  <meta name="author" content="FlexiCash UK" />
+  <meta name="robots" content="index, follow">
+
+  <!-- 🌐 CANONICAL URL -->
+  <link rel="canonical" href="https://flexicash.store/uk/apply.html">
+
+  <!-- 📱 CSS LINK (Points to main folder) -->
+  <link rel="stylesheet" href="../style.css" />
+  
+  <!-- 🔥 SCHEMA MARKUP FOR UK -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialProduct",
+    "name": "FlexiCash UK Personal Loan",
+    "url": "https://flexicash.store/uk/apply.html",
+    "description": "Fast online personal loans for residents in the United Kingdom.",
+    "areaServed": "GB",
+    "loanType": "Personal Loan"
+  }
+  </script>
+</head>
+
+<body class="apply-page">
+
+  <header>
+    <div class="topbar">
+      <a href="index.html" class="text-logo">
+        <span class="logo-icon">£</span>Flexi<span class="logo-highlight">Cash UK</span>
+      </a>
+    </div>
+  </header>
+
+  <section class="apply-hero">
+    <h1>UK Loan Application</h1>
+    <p>Fast, secure, and designed for UK residents. Apply in minutes.</p>
+  </section>
+
+  <section class="apply-form container">
+    <!-- FORM START -->
+    <form id="applyForm">
+      <h2 style="margin-bottom: 20px; color: #0f4c81;">Personal Details</h2>
+
+      <label>Full Name</label>
+      <input type="text" name="user_name" placeholder="As it appears on your ID" required>
+
+      <label>Email Address</label>
+      <input type="email" name="user_email" required>
+
+      <label>UK Mobile Number</label>
+      <input type="tel" name="user_phone" placeholder="07123 456789" required>
+      
+      <label>Current UK Address & Postcode</label>
+      <input type="text" name="user_address" placeholder="e.g. 10 Downing St, London, SW1A 2AA" required>
+
+      <div style="display: flex; gap: 10px;">
+          <div style="flex:1;">
+              <label>Residential Status</label>
+              <select name="residency" required>
+                  <option value="Tenant">Tenant</option>
+                  <option value="Homeowner">Homeowner</option>
+                  <option value="Living with Parents">Living with Parents</option>
+              </select>
+          </div>
+          <div style="flex:1;">
+              <label>Employment</label>
+              <select name="employment" required>
+                  <option value="Employed">Employed</option>
+                  <option value="Self-Employed">Self-Employed</option>
+                  <option value="Benefits">On Benefits</option>
+              </select>
+          </div>
+      </div>
+
+      <label>Date of Birth</label>
+      <input type="date" name="user_dob" required>
+
+      <label>National Insurance Number (Optional)</label>
+      <input type="text" name="user_NI" placeholder="e.g. QQ 12 34 56 C">
+
+      <label>Requested Loan Amount (£)</label>
+      <input type="number" name="loan_amount" placeholder="Min £100 - Max £5,000" required>
+
+      <button type="submit" style="background: #ffb700; color: #000; font-weight: bold; padding: 15px; border: none; cursor: pointer; width: 100%; border-radius: 5px; margin-top: 20px;">
+          Submit UK Application
+      </button>
+      
+      <p id="applyMessage" style="margin-top: 15px; text-align: center; font-weight: bold;"></p>
+    </form>
+    <!-- FORM END -->
+  </section>
+
+  <footer>
+    <div class="container" style="text-align: center; padding: 40px 0;">
+      <p>📍 FlexiCash UK - Serving London, Birmingham, Manchester & Glasgow</p>
+      <p>✉️ support@flexicash.store</p>
+      <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+      <p>© 2025 FlexiCash UK. All Rights Reserved.</p>
+      <p style="font-size: 0.8rem; color: #ccc;">
+          Representative Example: Borrowing £1,000 over 12 months at 49.9% APR would result in monthly repayments of £103.50. Total amount repayable £1,242.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ✅ Load EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Initialize EmailJS with your User ID
+      emailjs.init("vqrvWWXE1Pvw_Se3o"); 
+
+      const btn = document.querySelector('button[type="submit"]');
+      const form = document.getElementById('applyForm');
+
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        btn.innerText = 'Sending...';
+
+        // Send the form using EmailJS
+        // Replace 'service_xxxx' and 'template_xxxx' with your actual IDs
+        emailjs.sendForm('service_vqrvWWX', 'template_uk_loan', this)
+          .then(() => {
+            btn.innerText = 'Application Sent!';
+            document.getElementById('applyMessage').innerHTML = "✅ Thank you! Your UK application is being processed.";
+            form.reset();
+          }, (err) => {
+            btn.innerText = 'Submit UK Application';
+            alert(JSON.stringify(err));
+          });
+      });
+    });
+  </script>
+
+</body>
+</html>
