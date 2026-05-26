@@ -6,68 +6,193 @@
 
   <!-- 🔥 UK SEO TITLE -->
   <title>Apply Now | Fast Online Personal Loans UK – FlexiCash</title>
-
-  <!-- 🔥 UK DESCRIPTION -->
-  <meta name="description" content="Apply for a fast UK personal loan online. Secure application for UK residents. Get a decision quickly and funds sent to your UK bank account.">
-
-  <meta name="author" content="FlexiCash UK" />
-  <meta name="robots" content="index, follow">
-
-  <!-- 🌐 CANONICAL URL -->
+  <meta name="description" content="Secure online loan application for UK residents. Fast decisions and quick funding.">
   <link rel="canonical" href="https://flexicash.store/uk/apply.html">
 
-  <!-- 📱 CSS LINK (Points to main folder) -->
+  <!-- 📱 CSS LINK -->
   <link rel="stylesheet" href="../style.css" />
   
-  <!-- 🔥 SCHEMA MARKUP FOR UK -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FinancialProduct",
-    "name": "FlexiCash UK Personal Loan",
-    "url": "https://flexicash.store/uk/apply.html",
-    "description": "Fast online personal loans for residents in the United Kingdom.",
-    "areaServed": "GB",
-    "loanType": "Personal Loan"
-  }
-  </script>
+  <style>
+    /* 🛠️ CUSTOM FIXES FOR MOBILE & OVERLAP */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: #f4f7f9;
+    }
+
+    /* Fix the Touching Header Error */
+    header {
+        background: #0f4c81;
+        padding: 15px 0;
+        border-bottom: 4px solid #ffb700;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .logo-link {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-circle {
+        background: #ffb700;
+        color: #0f4c81;
+        padding: 5px 12px;
+        border-radius: 50%;
+        font-weight: bold;
+        margin-right: 10px;
+        font-size: 1.2rem;
+    }
+
+    .logo-text {
+        color: white;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.9rem;
+        border: 1px solid rgba(255,255,255,0.3);
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+        background: #ffb700;
+        color: #0f4c81;
+    }
+
+    /* Clean Hero for Apply Page */
+    .apply-hero-simple {
+        background: #0f4c81;
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .apply-hero-simple h1 {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    /* Form Styling */
+    .apply-form-container {
+        max-width: 600px;
+        margin: -30px auto 50px auto; /* Pulls form up into hero slightly */
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        position: relative;
+        z-index: 2;
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #333;
+        font-size: 0.9rem;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 12px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box; /* Important for mobile */
+    }
+
+    .submit-btn {
+        background: #ffb700;
+        color: #0f4c81;
+        font-weight: bold;
+        padding: 15px;
+        border: none;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 25px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+        background: #e6a700;
+    }
+
+    /* Mobile Specific Fixes */
+    @media (max-width: 600px) {
+        .nav-container {
+            flex-direction: column;
+            gap: 15px;
+        }
+        .apply-form-container {
+            margin: 20px;
+            padding: 20px;
+        }
+        .apply-hero-simple h1 {
+            font-size: 1.5rem;
+        }
+    }
+  </style>
+
+  <!-- Load EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
-<body class="apply-page">
+<body>
 
-  <header style="background: #0f4c81; padding: 10px 0; border-bottom: 3px solid #ffb700;">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 20px;">
-      <a href="index.html" class="text-logo" style="text-decoration: none; display: flex; align-items: center;">
-        <span style="background: #ffb700; color: #0f4c81; padding: 5px 10px; border-radius: 50%; font-weight: bold; margin-right: 10px;">£</span>
-        <span style="color: white; font-size: 1.5rem; font-weight: bold;">FlexiCash <span style="color: #ffb700;">UK</span></span>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <span class="logo-circle">£</span>
+        <span class="logo-text">FlexiCash <span style="color: #ffb700;">UK</span></span>
       </a>
       <nav>
-        <ul style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0;">
-          <li><a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">Home</a></li>
-          <li><a href="apply.html" style="color: white; text-decoration: none; font-weight: bold;">Apply Now</a></li>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="../index.html">USA Site</a></li>
         </ul>
       </nav>
     </div>
-</header>
+  </header>
 
-<!-- Added Padding-top here to stop the "Touching" error -->
-<section class="hero" style="padding: 80px 20px; text-align: center; background: #f4f7f9;">
-    <div class="hero-content" style="max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-      <h1 style="font-size: 2.5rem; color: #0f4c81; margin-bottom: 20px;">Need Quick Cash in the UK?</h1>
-      <p style="font-size: 1.2rem; color: #555; margin-bottom: 30px;">Borrow £100 – £5,000 today. Simple application, 2-minute decision.</p>
-      <a href="apply.html" class="apply-btn" style="padding: 18px 40px; background: #ffb700; color: #000; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.3rem; display: inline-block;">Start UK Application</a>
-    </div>
-</section>
+  <div class="apply-hero-simple">
+      <h1>UK Loan Application</h1>
+      <p>Quick decisions for UK residents</p>
+  </div>
 
- 
-
-  <section class="apply-form container">
-    <!-- FORM START -->
+  <section class="apply-form-container">
     <form id="applyForm">
-      <h2 style="margin-bottom: 20px; color: #0f4c81;">Personal Details</h2>
+      <h2 style="color: #0f4c81; margin-top: 0;">Personal Details</h2>
 
       <label>Full Name</label>
-      <input type="text" name="user_name" placeholder="As it appears on your ID" required>
+      <input type="text" name="user_name" placeholder="As shown on your ID" required>
 
       <label>Email Address</label>
       <input type="email" name="user_email" required>
@@ -76,11 +201,11 @@
       <input type="tel" name="user_phone" placeholder="07123 456789" required>
       
       <label>Current UK Address & Postcode</label>
-      <input type="text" name="user_address" placeholder="e.g. 10 Downing St, London, SW1A 2AA" required>
+      <input type="text" name="user_address" placeholder="e.g. 15 High St, London, SW1A 1AA" required>
 
       <div style="display: flex; gap: 10px;">
           <div style="flex:1;">
-              <label>Residential Status</label>
+              <label>Home Status</label>
               <select name="residency" required>
                   <option value="Tenant">Tenant</option>
                   <option value="Homeowner">Homeowner</option>
@@ -88,7 +213,7 @@
               </select>
           </div>
           <div style="flex:1;">
-              <label>Employment</label>
+              <label>Work Status</label>
               <select name="employment" required>
                   <option value="Employed">Employed</option>
                   <option value="Self-Employed">Self-Employed</option>
@@ -106,35 +231,29 @@
       <label>Requested Loan Amount (£)</label>
       <input type="number" name="loan_amount" placeholder="Min £100 - Max £5,000" required>
 
-      <button type="submit" style="background: #ffb700; color: #000; font-weight: bold; padding: 15px; border: none; cursor: pointer; width: 100%; border-radius: 5px; margin-top: 20px;">
-          Submit UK Application
-      </button>
+      <!-- HIDDEN FIELD TO TAG AS UK LEAD -->
+      <input type="hidden" name="user_state" value="UNITED KINGDOM">
+
+      <button type="submit" class="submit-btn">Submit UK Application</button>
       
       <p id="applyMessage" style="margin-top: 15px; text-align: center; font-weight: bold;"></p>
-
-      <input type="hidden" name="user_state" value="UNITED KINGDOM">
     </form>
-    <!-- FORM END -->
   </section>
 
-  <footer>
-    <div class="container" style="text-align: center; padding: 40px 0;">
-      <p>📍 FlexiCash UK - Serving London, Birmingham, Manchester & Glasgow</p>
-      <p>✉️ support@flexicash.store</p>
-      <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+  <footer style="background: #0f4c81; color: white; text-align: center; padding: 40px 20px;">
+      <p>📍 Serving the UK - London, Manchester, Birmingham, Glasgow</p>
       <p>© 2025 FlexiCash UK. All Rights Reserved.</p>
-      <p style="font-size: 0.8rem; color: #ccc;">
-          Representative Example: Borrowing £1,000 over 12 months at 49.9% APR would result in monthly repayments of £103.50. Total amount repayable £1,242.
+      <p style="font-size: 0.7rem; color: #ccc; max-width: 500px; margin: 10px auto;">
+        Representative Example: Borrowing £1,000 over 12 months at 49.9% APR would result in monthly repayments of £103.50. Total amount repayable £1,242.
       </p>
-    </div>
   </footer>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-      // 1. THIS IS YOUR PUBLIC KEY (This one is already correct)
+      // Initialize EmailJS with your Public Key
       emailjs.init("vqrvWWXE1Pvw_Se3o"); 
 
-      const btn = document.querySelector('button[type="submit"]');
+      const btn = document.querySelector('.submit-btn');
       const form = document.getElementById('applyForm');
 
       form.addEventListener('submit', function(event) {
@@ -142,13 +261,12 @@
 
         btn.innerText = 'Sending Application...';
 
-        // 2. YOU MUST EDIT THE TWO NAMES BELOW
-        // Replace 'YOUR_SERVICE_ID' with the one from your US main.js
-        // Replace 'YOUR_TEMPLATE_ID' with the one from your US main.js
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        // USING YOUR REAL IDs NOW:
+        emailjs.sendForm('service_s01wlde', 'template_4oam8ep', this)
           .then(() => {
             btn.innerText = 'Application Sent!';
             document.getElementById('applyMessage').innerHTML = "✅ Success! Your UK application has been received.";
+            document.getElementById('applyMessage').style.color = "green";
             form.reset();
           }, (err) => {
             btn.innerText = 'Submit UK Application';
@@ -158,24 +276,18 @@
     });
   </script>
 
-
-
-
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/69430be2ea27d7197b096542/1jcmucrag';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-  
+  <!-- Tawk.to Script -->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/69430be2ea27d7197b096542/1jcmucrag';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
 
 </body>
 </html>
